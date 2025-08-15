@@ -2,6 +2,9 @@
 Будівельник — це патерн проектування, що дозволяє створювати складні об'єкти покроково.
 Будівельник дає можливість використовувати той самий код будівництва для отримання
 різних уявлень об'єктів.
+
+Приклад: Створюємо будівельник для автівки, який додає різні елементи до автівок
+різного призначення при створенні.
 '''
 
 from abc import ABC, abstractmethod
@@ -30,19 +33,16 @@ class CarBuilder(ABC):
     def build_engine(self):
         pass
 
-    @abstractmethod
     def build_trailer(self):
         pass
 
-    @abstractmethod
     def build_trunk(self):
         pass
 
-    @abstractmethod
     def build_climate_control(self):
         pass
 
-    @abstractmethod
+
     def build_child_seat(self):
         pass
 
